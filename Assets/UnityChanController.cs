@@ -76,20 +76,20 @@ public class UnityChanController : MonoBehaviour
         float inputVelocityY = 0;
 
         //unityちゃんを矢印キーまたはボタンに応じて左右に移動させる
-        if (Keyboard.current.leftArrowKey.isPressed || isLButtonDown && -this.movableRange < this.transform.position.x)
+        if ((Keyboard.current.leftArrowKey.isPressed || this.isLButtonDown) && -this.movableRange < this.transform.position.x)
         {
             //左方向への速度を代入
             inputVelocityX = -this.velocityX;
 
         }
-        else if (Keyboard.current.rightArrowKey.isPressed || isRButtonDown && this.transform.position.x < this.movableRange)
+        else if ((Keyboard.current.rightArrowKey.isPressed || this.isRButtonDown) && this.transform.position.x < this.movableRange)
         {
             //右方向への速度を代入
             inputVelocityX = this.velocityX;
         }
 
-        //ジャンプしていない時にスペースが押されたらジャンプする
-        if (Keyboard.current.spaceKey.wasPressedThisFrame || isJButtonDown && this.transform.position.y < 0.5f)
+        //ジャンプしていない時にスペースまたはボタンが押されたらジャンプする
+        if ((Keyboard.current.spaceKey.wasPressedThisFrame || this.isJButtonDown) && this.transform.position.y < 0.5f)
         {
             //ジャンプアニメを再生
             this.myAnimator.SetBool("Jump", true);
@@ -125,7 +125,7 @@ public class UnityChanController : MonoBehaviour
         }
 
         //ゴール地点に到達した場合
-        if (other.gameObject.tag == "GoleTag")
+        if (other.gameObject.tag == "GoalTag")
         {
             this.isEnd = true;
             //stateTextにGAME CLEARを表示
@@ -156,7 +156,7 @@ public class UnityChanController : MonoBehaviour
     }
 
     //ジャンプボタンを離した場合の処理
-    public void GetMyHumpButonUp()
+    public void GetMyJumpButonUp()
     {
         this.isJButtonDown = false;
     }
@@ -167,14 +167,14 @@ public class UnityChanController : MonoBehaviour
         this.isLButtonDown = true;
     }
 
-    //左ボタンを離した売の処理
+    //左ボタンを離した場合の処理
     public void GetMyLeftButtonUp()
     {
         this.isLButtonDown = false;
     }
 
     //右ボタンを押し続けた場合の処理
-    public void GetyRightButtonDown()
+    public void GetMyRightButtonDown()
     {
         this.isRButtonDown = true;
     }
