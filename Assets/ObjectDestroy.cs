@@ -10,12 +10,9 @@ public class ObjectDestroy : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("CameraObject"))
-        {
-            //オブジェクトを削除
-            Debug.Log(other.gameObject.name );
-            Destroy(other.gameObject);
-        }
+        //オブジェクトを削除
+        Debug.Log(other.gameObject.name );
+        Destroy(other.gameObject);
     }
     // Update is called once per frame
     void Update()
