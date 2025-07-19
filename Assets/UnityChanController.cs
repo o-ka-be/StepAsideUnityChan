@@ -104,7 +104,7 @@ public class UnityChanController : MonoBehaviour
 
 
         //Jumpステートの場合はJumpにfalseをセットする
-        if (this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName ("Jump"))
+        if (this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
         {
             this.myAnimator.SetBool("Jump", false);
         }
@@ -142,10 +142,12 @@ public class UnityChanController : MonoBehaviour
             this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
             //パーティクルを再生
-            GetComponent<ParticleSystem> ().Play ();
+            GetComponent<ParticleSystem>().Play();
 
             //接触したコインのオブジェクトを破棄
-            Destroy (other.gameObject);
+            Destroy(other.gameObject);
+
+
         }
     }
 
@@ -185,5 +187,5 @@ public class UnityChanController : MonoBehaviour
         this.isRButtonDown = false;
     }
 
-
+    
 }
