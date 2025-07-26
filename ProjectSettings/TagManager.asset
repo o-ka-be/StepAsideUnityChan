@@ -9,6 +9,7 @@ TagManager:
   - CoinTag
   - GoalTag
   - ItemGenerator
+  - unitychan
   layers:
   - Default
   - TransparentFX
