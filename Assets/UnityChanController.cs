@@ -118,11 +118,7 @@ public class UnityChanController : MonoBehaviour
     //トリガーモードで他オブジェクトと接触した場合の処理
     void OnTriggerEnter(Collider other)
     {
-        //もしunityちゃんと他オブジェクトがぶつかったら
         
-        if (other.CompareTag("unitychanTag"))
-        {
-
             //障害物に衝突した場合
             if (other.gameObject.tag == "CarTag" || other.gameObject.tag == "TrafficConeTag")
             {
@@ -156,13 +152,7 @@ public class UnityChanController : MonoBehaviour
 
 
             }
-            //他オブジェクトにぶつかった場合
-            else if (other.gameObject)
-            //何もしない
-            {
-                return;
-            }
-        }
+        
     }
 
     //ジャンプボタンを押した場合の処理

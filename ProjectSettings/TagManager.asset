@@ -17,12 +17,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerCharacter
+  - Item
+  - ItemSpowner
+  - SpownTigger
+  - ItemDestroy
+  - stage
   - 
   - 
   - 

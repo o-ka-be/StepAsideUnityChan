@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 336940620002017844}
   - component: {fileID: 12689207868318207}
   - component: {fileID: 239967313657361468}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrafficConePrefab
   m_TagString: TrafficConeTag
   m_Icon: {fileID: 0}
