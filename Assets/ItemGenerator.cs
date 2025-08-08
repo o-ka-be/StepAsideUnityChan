@@ -8,8 +8,6 @@ public class ItemGenerator : MonoBehaviour
     public GameObject coinPrefab;
     //conePrefabを入れる
     public GameObject conePrefab;
-    //ObjectMake追加する
-    public GameObject ObjectMake;
     //スタート地点
     private int startPos = 80;
     //ゴール地点
@@ -34,7 +32,7 @@ public class ItemGenerator : MonoBehaviour
         if (other.gameObject.CompareTag("ItemGenerator"))
         {
             //生成のためのZ軸を取得する
-            float posZ = ObjectMake.transform.position.z;
+            float posZ = other.transform.position.z;
             
             //どのアイテムを出すのかランダムに設定
             int num = Random.Range(1, 11);
